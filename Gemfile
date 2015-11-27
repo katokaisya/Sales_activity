@@ -45,5 +45,9 @@ group :development do
   gem 'spring'
 end
 
+gem 'rails-erd'
+  #ER図を作ってくれる。bundle後に　sudo apt-get install graphviz
 gem 'annotate'
 
+gem 'thin'
+  # thin speeds up

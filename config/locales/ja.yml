@@ -204,23 +204,38 @@ ja:
     pm: 午後
   layouts:
     application:
-     title: "Pragmatic Bookshelf"
+     title: "営業履歴"
      home: "ホーム"
      questions: "よくある質問"
      news: "ニュース"
      contact: "お問い合わせ"
      show: "カートを見る"
-  store:
+  sales_histories:
     index:
-      title_html: "Pragmaticカタログ"
-      add_html: "カートに追加"
-  orders:
-    new:
-      legend: "お客様の情報を入力してください"
+      title: "営業履歴"
+      activity_time: "営業日時"
+      customer: "顧客名"
+      sales_category: "営業区分"
+      sales_achievement: "営業成果"
+      detail: "メモ"
+  customers:
+    index:|show:|form:
+      title: "顧客情報"
+      company_name: "会社名"
+      zip: "郵便番号"
+      address: "住所"
+      tel: "電話番号"
+      responsible_name: "担当者名"
+    show:
+      activity_time: "営業日時"
+      customer: "顧客名"
+      sales_category: "営業区分"
+      sales_achievement: "営業成果"
+      detail: "メモ"
     form:
-      name: "お名前"
-      address_html: "ご住所"
-      email: "Eメール"
-      pay_type: "お支払方法"
-      pay_prompt_html: "お支払方法を選択してください"
-      submit: "注文する"
+      title: "顧客情報"
+      company_name: "会社名"
+      zip: "郵便番号"
+      address: "住所"
+      tel: "電話番号"
+      responsible_name: "担当者名"

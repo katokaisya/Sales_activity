@@ -12,23 +12,29 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :activity_time %><br>
+    <%= f.label :activity_time,"営業日時" %><br>
     <%= f.datetime_select :activity_time %>
   </div>
   <div class="field">
-    <%= f.label :customer_id %><br>
-    <%= f.text_field :customer_id %>
+    <%= f.label :customer_id,"顧客ID" %><br>
+<!--     <%# customers = Customer.all %>
+    <%# ary=[] %>
+    <%# customers.each do|c| %>
+      <%# ary << [c.company_name, c.id] %>
+    <%# end %>
+    <%#= f.select(:customer_id, options_for_select(ary)) %>
+ -->    <%= f.collection_select(:customer_id, Customer.all, :id, :company_name) %>
   </div>
   <div class="field">
-    <%= f.label :sales_category %><br>
-    <%= f.text_field :sales_category %>
+    <%= f.label :sales_category,"営業区分" %><br>
+    <%= f.select(:sales_category, options_for_select(["商品案内","契約","フォロー","クレーム処理","他"],"契約")) %>
   </div>
   <div class="field">
-    <%= f.label :sales_achievement %><br>
-    <%= f.text_field :sales_achievement %>
+    <%= f.label :sales_achievement,"営業成果" %><br>
+    <%= f.select(:sales_achievement, options_for_select(["達成","継続","失敗"],"達成")) %>
   </div>
   <div class="field">
-    <%= f.label :detail %><br>
+    <%= f.label :detail,"メモ" %><br>
     <%= f.text_area :detail %>
   </div>
   <div class="actions">

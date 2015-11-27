@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Sales Histories</h1>
+<h1><%= t('.title')%></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Activity time</th>
-      <th>Customer</th>
-      <th>Sales category</th>
-      <th>Sales achievement</th>
-      <th>Detail</th>
+      <th><%= t('.activity_time')%></th>
+      <th><%= t('.customer')%></th>
+      <th><%= t('.sales_category')%></th>
+      <th><%= t('.sales_achievement')%></th>
+      <th><%= t('.detail')%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,7 +18,7 @@
     <% @sales_histories.each do |sales_history| %>
       <tr>
         <td><%= sales_history.activity_time %></td>
-        <td><%= sales_history.customer %></td>
+        <td><%= sales_history.customer.company_name %></td>
         <td><%= sales_history.sales_category %></td>
         <td><%= sales_history.sales_achievement %></td>
         <td><%= sales_history.detail %></td>
