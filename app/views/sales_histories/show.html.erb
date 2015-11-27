@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Activity time:</strong>
+  <%= @sales_history.activity_time %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @sales_history.customer %>
+</p>
+
+<p>
+  <strong>Sales category:</strong>
+  <%= @sales_history.sales_category %>
+</p>
+
+<p>
+  <strong>Sales achievement:</strong>
+  <%= @sales_history.sales_achievement %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @sales_history.detail %>
+</p>
+
+<%= link_to 'Edit', edit_sales_history_path(@sales_history) %> |
+<%= link_to 'Back', sales_histories_path %>

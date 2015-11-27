@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127024852) do
+ActiveRecord::Schema.define(version: 20151127030651) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "company_name"
@@ -22,5 +22,17 @@ ActiveRecord::Schema.define(version: 20151127024852) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
+
+  create_table "sales_histories", force: :cascade do |t|
+    t.datetime "activity_time"
+    t.integer  "customer_id"
+    t.string   "sales_category"
+    t.string   "sales_achievement"
+    t.text     "detail"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "sales_histories", ["customer_id"], name: "index_sales_histories_on_customer_id"
 
 end
